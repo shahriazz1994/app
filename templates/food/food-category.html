@@ -1,0 +1,18 @@
+{% extends 'smartmenu/layout.html' %}
+{% block content %}
+    <div class="card-deck">
+    {% for f in food %}
+
+
+  <div class="card">
+    <img class="card-img-top" src="{{ f.categoryimage.url }}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ f.categoryname }}</h5>
+      <p class="card-text">{{ f.categorydetails }}</p>
+    </div>
+  </div>
+
+
+    {% endfor %}
+    </div>
+{% endblock %}
